@@ -1,0 +1,42 @@
+{
+  "name": "idntfy",
+  "version": "0.0.0",
+  "description": "Compare trace identity.",
+  "main": "idntfy.js",
+  "support": "idntfy.support.js",
+  "deploy": "idntfy.deploy.js",
+  "browser": "idntfy.deploy.js",
+  "scripts": {
+    "build": "babel idntfy.js --out-file idntfy.support.js --source-maps && webpack --progress --display-modules",
+    "test": "mocha idntfy-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkovasystems/idntfy.git"
+  },
+  "keywords": [
+    "compare",
+    "trace",
+    "identity",
+    "idntfy"
+  ],
+  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/volkovasystems/idntfy/issues"
+  },
+  "homepage": "https://github.com/volkovasystems/idntfy#readme",
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "eqe": "^0.2.0",
+    "falzy": "^0.19.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "source-map-loader": "^0.2.1",
+    "webpack": "^2.5.0"
+  }
+}

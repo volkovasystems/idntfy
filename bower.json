@@ -1,0 +1,29 @@
+{
+  "name": "idntfy",
+  "version": "0.0.0",
+  "description": "Compare trace identity.",
+  "main": "idntfy.deploy.js",
+  "support": "idntfy.support.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "compare",
+    "trace",
+    "identity",
+    "idntfy"
+  ],
+  "homepage": "https://github.com/volkovasystems/idntfy",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "eqe": "^0.2.0",
+    "falzy": "^0.19.0"
+  }
+}
