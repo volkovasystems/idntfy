@@ -47,14 +47,18 @@
 
 	@include:
 		{
-			"eqe": "eqe",
-			"falzy": "falzy"
+			"falzy": "falzy",
+			"ntrprt": "ntrprt",
+			"protype": "protype",
+			"transyl": "transyl"
 		}
 	@end-include
 */
 
-const eqe = require( "eqe" );
 const falzy = require( "falzy" );
+const ntrprt = require( "ntrprt" );
+const protype = require( "protype" );
+const transyl = require( "transyl" );
 
 const ID = Symbol.for( "id" );
 
@@ -72,11 +76,18 @@ const idntfy = function idntfy( source, target ){
 		return false;
 	}
 
-	if( falzy( source[ ID ] ) || falzy( target[ ID ] ) ){
+	source = ntrprt( ID, source );
+	target = ntrprt( ID, target );
+
+	if( falzy( source ) ||
+		falzy( target ) ||
+		!protype( source, SYMBOL ) ||
+		!protype( target, SYMBOL ) )
+	{
 		return false;
 	}
 
-	return eqe( source[ ID ], target[ ID ] );
+	return transyl( source, target );
 };
 
 module.exports = idntfy;

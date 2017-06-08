@@ -1,7 +1,9 @@
 yarn add \
 babel-runtime \
-eqe \
 falzy \
+ntrprt \
+protype \
+transyl \
 --save && \
 yarn add \
 babel-cli \
@@ -12,7 +14,9 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
-eqe \
 falzy \
+ntrprt \
+protype \
+transyl \
 --save \
 --force-latest

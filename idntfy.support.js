@@ -47,14 +47,18 @@
               
               	@include:
               		{
-              			"eqe": "eqe",
-              			"falzy": "falzy"
+              			"falzy": "falzy",
+              			"ntrprt": "ntrprt",
+              			"protype": "protype",
+              			"transyl": "transyl"
               		}
               	@end-include
               */var _for = require("babel-runtime/core-js/symbol/for");var _for2 = _interopRequireDefault(_for);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
-var eqe = require("eqe");
 var falzy = require("falzy");
+var ntrprt = require("ntrprt");
+var protype = require("protype");
+var transyl = require("transyl");
 
 var ID = (0, _for2.default)("id");
 
@@ -72,11 +76,18 @@ var idntfy = function idntfy(source, target) {
 		return false;
 	}
 
-	if (falzy(source[ID]) || falzy(target[ID])) {
+	source = ntrprt(ID, source);
+	target = ntrprt(ID, target);
+
+	if (falzy(source) ||
+	falzy(target) ||
+	!protype(source, SYMBOL) ||
+	!protype(target, SYMBOL))
+	{
 		return false;
 	}
 
-	return eqe(source[ID], target[ID]);
+	return transyl(source, target);
 };
 
 module.exports = idntfy;

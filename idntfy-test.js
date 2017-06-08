@@ -3,8 +3,8 @@ const assert = require( "assert" );
 const idntfy = require( "./idntfy.js" );
 
 const ID = Symbol.for( "id" );
-let source = { [ ID ]: "sample-identity" };
-let target = { [ ID ]: "sample-identity" };
+let source = { [ ID ]: Symbol( "sample-identity" ) };
+let target = { [ ID ]: Symbol( "sample-identity" ) };
 
 assert.equal( idntfy( source, target ), true, "should be true" );
 
