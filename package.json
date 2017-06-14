@@ -1,6 +1,6 @@
 {
   "name": "idntfy",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Compare trace identity.",
   "main": "idntfy.js",
   "support": "idntfy.support.js",
@@ -25,7 +25,7 @@
     "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
     "Vinse Vinalon"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/volkovasystems/idntfy/issues"
   },

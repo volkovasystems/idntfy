@@ -57,14 +57,14 @@
               			"transyl": "transyl"
               		}
               	@end-include
-              */var _for = require("babel-runtime/core-js/symbol/for");var _for2 = _interopRequireDefault(_for);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+              */var _symbol = require("babel-runtime/core-js/symbol");var _symbol2 = _interopRequireDefault(_symbol);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 var falzy = require("falzy");
 var ntrprt = require("ntrprt");
 var protype = require("protype");
 var transyl = require("transyl");
 
-var ID = (0, _for2.default)("id");
+var ID = (0, _symbol2.default)("id");
 
 var idntfy = function idntfy(source, target) {
 	/*;

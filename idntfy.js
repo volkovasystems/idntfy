@@ -64,7 +64,7 @@ const ntrprt = require( "ntrprt" );
 const protype = require( "protype" );
 const transyl = require( "transyl" );
 
-const ID = Symbol.for( "id" );
+const ID = Symbol( "id" );
 
 const idntfy = function idntfy( source, target ){
 	/*;
