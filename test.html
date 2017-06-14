@@ -1,8 +1,34 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./idntfy.deploy.js">
-		</script>
+		<title>idntfy unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./idntfy.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "idntfy unit test", function( assert ) {
+
+				const ID = Symbol.for( "id" );
+				let source = { [ ID ]: Symbol( "sample-identity" ) };
+				let target = { [ ID ]: Symbol( "sample-identity" ) };
+
+				assert.equal( idntfy( source, target ), true, "should be true" );
+
+				assert.equal( idntfy( { }, { } ), false, "should be false" );
+
+				assert.equal( idntfy( ), false, "should be false" );
+
+			} );
+		</script>
+	</body>
 </html>

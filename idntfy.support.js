@@ -35,6 +35,10 @@
               			"module": "idntfy",
               			"author": "Richeve S. Bebedor",
               			"eMail": "richeve.bebedor@gmail.com",
+              			"contributors": [
+              				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+              				"Vinse Vinalon"
+              			],
               			"repository": "https://github.com/volkovasystems/idntfy.git",
               			"test": "idntfy-test.js",
               			"global": true
