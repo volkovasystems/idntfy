@@ -37,7 +37,7 @@
               			"eMail": "richeve.bebedor@gmail.com",
               			"contributors": [
               				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-              				"Vinse Vinalon"
+              				"Vinse Vinalon <vinsevinalon@gmail.com>"
               			],
               			"repository": "https://github.com/volkovasystems/idntfy.git",
               			"test": "idntfy-test.js",
@@ -53,15 +53,13 @@
               		{
               			"falzy": "falzy",
               			"ntrprt": "ntrprt",
-              			"protype": "protype",
               			"transyl": "transyl"
               		}
               	@end-include
-              */var _symbol = require("babel-runtime/core-js/symbol");var _symbol2 = _interopRequireDefault(_symbol);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+              */var _typeof2 = require("babel-runtime/helpers/typeof");var _typeof3 = _interopRequireDefault(_typeof2);var _symbol = require("babel-runtime/core-js/symbol");var _symbol2 = _interopRequireDefault(_symbol);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 var falzy = require("falzy");
 var ntrprt = require("ntrprt");
-var protype = require("protype");
 var transyl = require("transyl");
 
 var ID = (0, _symbol2.default)("id");
@@ -85,8 +83,8 @@ var idntfy = function idntfy(source, target) {
 
 	if (falzy(source) ||
 	falzy(target) ||
-	!protype(source, SYMBOL) ||
-	!protype(target, SYMBOL))
+	(typeof source === "undefined" ? "undefined" : (0, _typeof3.default)(source)) != "symbol" ||
+	(typeof target === "undefined" ? "undefined" : (0, _typeof3.default)(target)) != "symbol")
 	{
 		return false;
 	}

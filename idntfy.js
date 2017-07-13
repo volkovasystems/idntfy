@@ -37,7 +37,7 @@
 			"eMail": "richeve.bebedor@gmail.com",
 			"contributors": [
 				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-				"Vinse Vinalon"
+				"Vinse Vinalon <vinsevinalon@gmail.com>"
 			],
 			"repository": "https://github.com/volkovasystems/idntfy.git",
 			"test": "idntfy-test.js",
@@ -53,7 +53,6 @@
 		{
 			"falzy": "falzy",
 			"ntrprt": "ntrprt",
-			"protype": "protype",
 			"transyl": "transyl"
 		}
 	@end-include
@@ -61,7 +60,6 @@
 
 const falzy = require( "falzy" );
 const ntrprt = require( "ntrprt" );
-const protype = require( "protype" );
 const transyl = require( "transyl" );
 
 const ID = Symbol( "id" );
@@ -85,8 +83,8 @@ const idntfy = function idntfy( source, target ){
 
 	if( falzy( source ) ||
 		falzy( target ) ||
-		!protype( source, SYMBOL ) ||
-		!protype( target, SYMBOL ) )
+		typeof source != "symbol" ||
+		typeof target != "symbol" )
 	{
 		return false;
 	}

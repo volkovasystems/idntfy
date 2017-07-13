@@ -1,13 +1,13 @@
 {
   "name": "idntfy",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Compare trace identity.",
   "main": "idntfy.deploy.js",
   "support": "idntfy.support.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
     "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon"
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -26,8 +26,7 @@
   ],
   "dependencies": {
     "falzy": "^0.20.0",
-    "ntrprt": "^0.1.0",
-    "protype": "^0.22.0",
-    "transyl": "^0.1.0"
+    "ntrprt": "^0.3.0",
+    "transyl": "^0.2.0"
   }
 }

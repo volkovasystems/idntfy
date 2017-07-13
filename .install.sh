@@ -2,7 +2,6 @@ yarn add \
 babel-runtime \
 falzy \
 ntrprt \
-protype \
 transyl \
 --save && \
 yarn add \
@@ -16,7 +15,6 @@ webpack \
 bower install \
 falzy \
 ntrprt \
-protype \
 transyl \
 --save \
 --force-latest
