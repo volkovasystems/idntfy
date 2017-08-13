@@ -1,47 +1,50 @@
 {
-  "name": "idntfy",
-  "version": "0.4.0",
-  "description": "Compare trace identity.",
-  "main": "idntfy.js",
-  "support": "idntfy.support.js",
-  "deploy": "idntfy.deploy.js",
-  "browser": "idntfy.deploy.js",
-  "scripts": {
-    "build": "babel idntfy.js --out-file idntfy.support.js --source-maps && webpack --progress --display-modules",
-    "test": "mocha idntfy-test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/volkovasystems/idntfy.git"
-  },
-  "keywords": [
-    "compare",
-    "trace",
-    "identity",
-    "idntfy"
-  ],
-  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-  "contributors": [
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/volkovasystems/idntfy/issues"
-  },
-  "homepage": "https://github.com/volkovasystems/idntfy#readme",
-  "dependencies": {
-    "babel-runtime": "^6.23.0",
-    "falzy": "^0.20.0",
-    "ntrprt": "^0.3.0",
-    "transyl": "^0.2.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-latest": "^6.24.1",
-    "source-map-loader": "^0.2.1",
-    "webpack": "^3.2.0"
-  }
+	"name": "idntfy",
+	"version": "0.5.0",
+	"description": "Compare trace identity.",
+	"main": "idntfy.js",
+	"support": "idntfy.support.js",
+	"deploy": "idntfy.deploy.js",
+	"browser": "idntfy.deploy.js",
+	"scripts": {
+		"pristine": "rsetmod clean && flxc execute ./.install.sh",
+		"clear": "rsetmod clean --clear",
+		"build": "babel idntfy.js --out-file idntfy.support.js --source-maps && webpack --progress --display-modules",
+		"pretest": "npm run clear && npm run build",
+		"test": "node idntfy-test.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/volkovasystems/idntfy.git"
+	},
+	"keywords": [
+		"compare",
+		"trace",
+		"identity",
+		"idntfy"
+	],
+	"author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+	"contributors": [
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/volkovasystems/idntfy/issues"
+	},
+	"homepage": "https://github.com/volkovasystems/idntfy#readme",
+	"dependencies": {
+		"babel-runtime": "^6.25.0",
+		"falzy": "^0.23.0",
+		"ntrprt": "^0.5.0",
+		"transyl": "^0.4.0"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.24.1",
+		"babel-core": "^6.25.0",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-latest": "^6.24.1",
+		"source-map-loader": "^0.2.1",
+		"webpack": "^3.5.4"
+	}
 }
