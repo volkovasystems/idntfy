@@ -1,0 +1,148 @@
+{
+	"state": {
+		"passed": 3,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-08-17T09:07:19.528Z",
+	"end": "2017-08-17T09:07:56.797Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "idntfy",
+			"duration": 0,
+			"start": "2017-08-17T09:07:56.430Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "idntfy",
+			"duration": 189,
+			"start": "2017-08-17T09:07:56.431Z",
+			"end": "2017-08-17T09:07:56.620Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-17T09:07:56.432Z",
+					"end": "2017-08-17T09:07:56.432Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "idntfy",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-17T09:07:56.528Z",
+					"end": "2017-08-17T09:07:56.529Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "idntfy",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-17T09:07:56.529Z",
+					"end": "2017-08-17T09:07:56.530Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "idntfy",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-17T09:07:56.573Z",
+					"end": "2017-08-17T09:07:56.573Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "idntfy",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-17T09:07:56.574Z",
+					"end": "2017-08-17T09:07:56.574Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "idntfy",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-17T09:07:56.620Z",
+					"end": "2017-08-17T09:07:56.620Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "idntfy",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-17T09:07:56.620Z",
+					"end": "2017-08-17T09:07:56.621Z",
+					"duration": 1,
+					"title": "\"after all\" hook",
+					"associatedSuite": "idntfy"
+				}
+			]
+		},
+		{
+			"name": "`idntfy( { [ Symbol.for( 'id' ) ]: Symbol( 'sample-identity' ) }, { [ Symbol.for( 'id' ) ]: Symbol( 'sample-identity' ) } )`",
+			"duration": 98,
+			"start": "2017-08-17T09:07:56.431Z",
+			"end": "2017-08-17T09:07:56.529Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-08-17T09:07:56.432Z",
+					"end": "2017-08-17T09:07:56.528Z",
+					"duration": 96,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`idntfy( { }, { } )`",
+			"duration": 45,
+			"start": "2017-08-17T09:07:56.529Z",
+			"end": "2017-08-17T09:07:56.574Z",
+			"tests": [
+				{
+					"name": "should be equal to false",
+					"start": "2017-08-17T09:07:56.529Z",
+					"end": "2017-08-17T09:07:56.573Z",
+					"duration": 44,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`idntfy( )`",
+			"duration": 46,
+			"start": "2017-08-17T09:07:56.574Z",
+			"end": "2017-08-17T09:07:56.620Z",
+			"tests": [
+				{
+					"name": "should be equal to false",
+					"start": "2017-08-17T09:07:56.574Z",
+					"end": "2017-08-17T09:07:56.620Z",
+					"duration": 46,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}
