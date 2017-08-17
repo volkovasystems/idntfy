@@ -82,6 +82,18 @@ describe( "idntfy", ( ) => {
 		} );
 	} );
 
+	describe( "`idntfy( { }, { } )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+			assert.equal( idntfy( { }, { } ), false );
+		} );
+	} );
+
+	describe( "`idntfy( )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+			assert.equal( idntfy( ), false );
+		} );
+	} );
+
 } );
 
 //: @end-server
@@ -90,6 +102,31 @@ describe( "idntfy", ( ) => {
 //: @client:
 
 describe( "idntfy", ( ) => {
+
+	describe( "`idntfy( { [ Symbol.for( 'id' ) ]: Symbol( 'sample-identity' ) }, { [ Symbol.for( 'id' ) ]: Symbol( 'sample-identity' ) } )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			const ID = Symbol.for( "id" );
+			let source = { [ ID ]: Symbol( "sample-identity" ) };
+			let target = { [ ID ]: Symbol( "sample-identity" ) };
+
+			assert.equal( idntfy( source, target ), true );
+
+		} );
+	} );
+
+	describe( "`idntfy( { }, { } )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+			assert.equal( idntfy( { }, { } ), false );
+		} );
+	} );
+
+	describe( "`idntfy( )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+			assert.equal( idntfy( ), false );
+		} );
+	} );
+
 } );
 
 //: @end-client
@@ -98,6 +135,65 @@ describe( "idntfy", ( ) => {
 //: @bridge:
 
 describe( "idntfy", ( ) => {
+
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
+
+	describe( "`idntfy( { [ Symbol.for( 'id' ) ]: Symbol( 'sample-identity' ) }, { [ Symbol.for( 'id' ) ]: Symbol( 'sample-identity' ) } )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					const ID = Symbol.for( "id" );
+					let source = { [ ID ]: Symbol( "sample-identity" ) };
+					let target = { [ ID ]: Symbol( "sample-identity" ) };
+
+					return idntfy( source, target );
+
+				}
+
+			).value;
+			//: @end-ignore
+			assert.equal( result, true );
+
+		} );
+	} );
+
+	describe( "`idntfy( { }, { } )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return idntfy( { }, { } );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.equal( result, false );
+
+		} );
+	} );
+
+	describe( "`idntfy( )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return idntfy( );
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.equal( result, false );
+
+		} );
+	} );
+
 } );
 
 //: @end-bridge
