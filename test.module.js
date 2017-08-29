@@ -162,7 +162,7 @@ describe( "idntfy", ( ) => {
 
 	describe( "`idntfy( { }, { } )`", ( ) => {
 		it( "should be equal to false", ( ) => {
-			//: @ignore:
+
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
@@ -170,7 +170,7 @@ describe( "idntfy", ( ) => {
 				}
 
 			).value;
-			//: @end-ignore
+
 			assert.equal( result, false );
 
 		} );
@@ -179,7 +179,6 @@ describe( "idntfy", ( ) => {
 	describe( "`idntfy( )`", ( ) => {
 		it( "should be equal to false", ( ) => {
 
-			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
@@ -187,7 +186,6 @@ describe( "idntfy", ( ) => {
 				}
 
 			).value;
-			//: @end-ignore
 
 			assert.equal( result, false );
 
